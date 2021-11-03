@@ -1,0 +1,8 @@
+type Blog @model {
+  id: ID!
+  title: String!
+  summary: String
+  content: String
+  timestamp: String
+  likes: Int
+}
