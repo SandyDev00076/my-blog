@@ -11,7 +11,7 @@ interface Props {
 export default function Home({ blogs }: Props) {
   console.log(blogs);
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Blogs | Sanjeet Tiwari</title>
         <meta name="description" content="Blogs by me" />
@@ -21,7 +21,7 @@ export default function Home({ blogs }: Props) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const blogsResponse = (await API.graphql({
     query: listBlogs,
   })) as BlogsReponse;
