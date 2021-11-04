@@ -1,6 +1,7 @@
+@use "../styles/shared";
+
 .container {
-  min-height: 100vh;
-  background-color: var(--bg);
+  @extend %page;
   padding: 32px 20%;
 }
 
