@@ -21,3 +21,34 @@
   color: var(--text-invert-secondary);
   margin-bottom: 5px;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.likes {
+  font-weight: bold;
+  color: var(--text-invert-secondary);
+}
+
+.likesPart {
+  display: flex;
+  align-items: center;
+  & > svg {
+    fill: var(--text-invert-secondary);
+    margin-right: 5px;
+  }
+}
+
+.lastUpdatedPart {
+  margin-right: 32px;
+  color: var(--text-invert-secondary);
+
+  & > span {
+    font-weight: bold;
+    margin-left: 10px;
+    color: var(--text-invert-secondary);
+  }
+}
