@@ -14,7 +14,7 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--bg);
-  padding: 32px 20%;
+  padding: 32px 25%;
 }
 
 a {
@@ -35,4 +35,69 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.variant1 {
+  background: linear-gradient(
+    341deg,
+    var(--tile-color-1),
+    var(--tile-color-1-tint)
+  );
+}
+
+.variant2 {
+  background: linear-gradient(
+    341deg,
+    var(--tile-color-2),
+    var(--tile-color-2-tint)
+  );
+}
+
+.variant3 {
+  background: linear-gradient(
+    341deg,
+    var(--tile-color-3),
+    var(--tile-color-3-tint)
+  );
+}
+
+.variant4 {
+  background: linear-gradient(
+    341deg,
+    var(--tile-color-4),
+    var(--tile-color-4-tint)
+  );
+}
+
+.variant5 {
+  background: linear-gradient(
+    341deg,
+    var(--tile-color-5),
+    var(--tile-color-5-tint)
+  );
+}
+
+.variant6 {
+  background: linear-gradient(
+    341deg,
+    var(--tile-color-6),
+    var(--tile-color-6-tint)
+  );
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding-inline: 20%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding-inline: 32px;
+  }
 }

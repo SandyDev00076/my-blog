@@ -2,6 +2,13 @@
   margin-bottom: 32px;
 }
 
-.icon {
-  fill: #333;
+.socialIcon {
+  & > svg {
+    fill: white;
+  }
+  padding: 0;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  background-color: black;
 }

@@ -1,7 +1,8 @@
 import API from "@aws-amplify/api";
 import Head from "next/head";
+import BlogComp from "../components/Blog";
+import { Blog } from "../graphql-src/blog-api";
 import { listBlogs } from "../graphql-src/graphql/queries";
-import { Blog } from "../types/Blog";
 import { BlogsReponse } from "../types/BlogsResponse";
 import styles from "./Home.module.scss";
 
@@ -17,6 +18,12 @@ export default function Home({ blogs }: Props) {
         <meta name="description" content="Blogs by me" />
       </Head>
       <h1 className={styles.name}>Sanjeet Tiwari</h1>
+      <section className={styles.blogsSection}>
+        <h2 className={styles.blogsTitle}>Blogs ({blogs.length})</h2>
+        {blogs.map((blog, index) => (
+          <BlogComp key={blog.id} obj={blog} index={index} />
+        ))}
+      </section>
     </div>
   );
 }

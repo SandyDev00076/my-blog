@@ -1,0 +1,23 @@
+.container {
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-invert);
+}
+
+.summary {
+  font-size: 1rem;
+  color: var(--text-invert-secondary);
+  margin-bottom: 5px;
+}
