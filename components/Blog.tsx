@@ -16,16 +16,18 @@ const Blog = ({ obj, index }: Props) => {
       <div className={cJoin(styles.container, `variant${variantNumber}`)}>
         <div className={styles.title}>{obj.title}</div>
         <div className={styles.summary}>{obj.summary}</div>
-        <div className={styles.header}>
+        <div className={styles.footer}>
           <div className={styles.lastUpdatedPart}>
             <div>Last Updated</div>
             <div className={styles.lastUpdated}>
               {new Date(obj.updatedAt).toDateString()}
             </div>
           </div>
-          <div className={styles.likesPart}>
-            <LikesIcon /> <span className={styles.likes}>{obj.likes}</span>
-          </div>
+          {obj.likes > 0 && (
+            <div className={styles.likesPart}>
+              <LikesIcon /> <span className={styles.likes}>{obj.likes}</span>
+            </div>
+          )}
         </div>
       </div>
     </Link>

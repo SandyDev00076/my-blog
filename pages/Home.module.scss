@@ -9,6 +9,7 @@
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--text);
+  margin-bottom: 32px;
 }
 
 .blogsTitle {
@@ -20,7 +21,4 @@
 }
 
 .blogs {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 16px;
 }

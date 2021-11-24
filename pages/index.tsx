@@ -22,7 +22,6 @@ export default function Home({ blogs }: Props) {
         <h1 className={styles.name}>Sanjeet Tiwari</h1>
       </section>
       <section className={styles.blogsSection}>
-        <h2 className={styles.blogsTitle}>Blogs ({blogs.length})</h2>
         <div className={styles.blogs}>
           {blogs.map((blog, index) => (
             <BlogComp key={blog.id} obj={blog} index={index} />

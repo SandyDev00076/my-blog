@@ -8,6 +8,7 @@ import { BlogsReponse } from "../../types/BlogsResponse";
 import { GetBlogResponse } from "../../types/GetBlogResponse";
 import ReactMarkdown from "react-markdown";
 import { LikeIcon, LikesIcon } from "../../assets/icons";
+import { updateBlog } from "../../graphql-src/graphql/mutations";
 
 import styles from "../BlogPage.module.scss";
 
@@ -17,7 +18,11 @@ interface Props {
 const Blog = ({ blog }: Props) => {
   const [liked, setLiked] = useState(false);
 
-  function likeThisBlog() {
+  async function likeThisBlog() {
+    await API.graphql({
+      query: updateBlog,
+      variables: { input: { ...blog, likes: blog.likes + 1 } },
+    });
     setLiked(true);
   }
 
