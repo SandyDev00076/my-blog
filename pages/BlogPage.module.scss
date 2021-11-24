@@ -1,2 +1,58 @@
-.container {
+.title {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.marker {
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+.summary {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+.mdArea {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: var(--bg-tint);
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+  }
+}
+
+.likeIcon {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  svg {
+    fill: var(--text);
+  }
+}
+
+.likedIcon {
+  svg {
+    fill: var(--like);
+  }
 }
